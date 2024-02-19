@@ -92,7 +92,7 @@ body {
   top: 100%;
   right: 10%;
   background-color: #fff;
-  width: 40rem;
+  width: 30rem;
   height: 5rem;
   display: flex;
   align-items: center;
@@ -493,7 +493,7 @@ footer .credit a {
   left: 0;
   top: 0;
   width: 100%;
-  height: 105%;
+  height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.7);
 }
@@ -506,17 +506,25 @@ footer .credit a {
   padding: 1.2rem;
   border: 1px solid #666;
   width: 80%;
+  animation: animateModal 0.5s;
+}
+
+/* Modal Animation */
+@keyframes animateModal {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
 }
 
 .modal-container .close-icon {
   position: absolute;
-  right: 0.5rem;
+  right: 1rem;
 }
-
-.modal-container .close-icon:hover {
-  color: var(--primary);
-}
-
 
 .modal-content {
   display: flex;
@@ -524,33 +532,26 @@ footer .credit a {
 }
 
 .modal-content img {
-  height: 21rem;
+  height: 20rem;
   margin-right: 2rem;
   margin-bottom: 2rem;
-  border-radius: 4%;
 }
 
 .modal-content p {
   font-size: 1.2rem;
-  text-align: justify;
-  line-height: 1.4rem;
-  margin-top: 0.5rem;
+  line-height: 1.8rem;
+  margin-top: 1.2rem;
 }
 
 .modal-content a {
   display: flex;
   gap: 1rem;
   width: 12rem;
-  text-align: center;
-  font-size: 1.2rem;
   background-color: var(--primary);
   color: #fff;
   margin-top: 1rem;
   padding: 1rem 1.6rem;
-  border-radius: 5%;
 }
-
-
 
 
 
@@ -641,10 +642,6 @@ footer .credit a {
 
   .contact .row form {
     padding-top: 0;
-  }
-
-  .modal-container {
-    height: 80%;
   }
 
   .modal-content {
